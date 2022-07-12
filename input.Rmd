@@ -30,7 +30,7 @@ library(osmdata)
 
 ```
 
-## `r params$country_code`
+## `r params$country`
 
 ```{r}
 viz_variables()

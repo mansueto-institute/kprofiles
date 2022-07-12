@@ -1,6 +1,5 @@
 library(rmarkdown)
 source("./wrangle/functions.R")
-source("./wrangle/load.R")
 
 country_codes = c("AGO", "BEN", "RWA")
 country_labels = c("Angola", "Benin", "Rwanda")
@@ -19,13 +18,11 @@ render_report = function(code, country, city) {
 }
 
 for (i in seq_along(country_codes)) {
-  load()
+  load_data()
+
   code <- country_codes[i]
   name <- country_labels[i]
   city <- city_labels[i]
-  print(code)
-  print(name)
-  print(city)
 
   load_country(code, name, city)
   bounds(city)
